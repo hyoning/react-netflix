@@ -1,13 +1,17 @@
 import React from 'react'
-import {Form} from 'react-bootstrap'
+import { Dropdown } from 'react-bootstrap';
 
 const PopularFilter = ({ onSortChange }) => {
   return (
-    <Form.Select aria-label="Popular" onChange={(e) => onSortChange(e.target.value)}>
-        <option>Popular</option>
-        <option value="desc">High to Low</option>
-        <option value="asc">Low to High</option>
-    </Form.Select>
+    <Dropdown>
+      <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+        Sort
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+        <Dropdown.Item onClick={() => onSortChange('desc')}>High to Low</Dropdown.Item>
+        <Dropdown.Item onClick={() => onSortChange('asc')}>Low to High</Dropdown.Item>
+      </Dropdown.Menu>  
+    </Dropdown>
   )
 }
 

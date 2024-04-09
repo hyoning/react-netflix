@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form} from 'react-bootstrap'
+import { Dropdown } from 'react-bootstrap';
 import { useMovieGenreQuery } from '../../../../hook/useMoveGenre';
 
 const GenresFilter = ({ onGenreChange }) => {
@@ -9,12 +9,16 @@ const GenresFilter = ({ onGenreChange }) => {
   if (isError) return <div>Error loading genres.</div>;
 
   return (
-    <Form.Select aria-label="genre" onChange={e => onGenreChange(e.target.value)}>
-      <option value="">Select a Genre</option>
-      {genres.map(genre => (
-        <option key={genre.id} value={genre.id}>{genre.name}</option>
-      ))}
-     </Form.Select>
+    <Dropdown>
+      <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+        Genre
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+       {genres.map(genre => (
+          <Dropdown.Item onClick={() => onGenreChange(genre.id)}>{genre.name}</Dropdown.Item>
+        ))}
+      </Dropdown.Menu>  
+    </Dropdown>
   );
 }
 
