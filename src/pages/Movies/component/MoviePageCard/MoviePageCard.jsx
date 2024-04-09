@@ -6,7 +6,7 @@ import { ReactComponent as LikeIcon } from "../../../../assets/images/like.svg";
 import { useMovieGenreQuery } from '../../../../hook/useMoveGenre'
 
 
-const MoviePageCard = ({movie, selectedGenre}) => {
+const MoviePageCard = ({movie}) => {
     const {data:genreData} = useMovieGenreQuery();
     const showGenre = (genreIdList) => {
         if(!genreData) return []
@@ -16,10 +16,7 @@ const MoviePageCard = ({movie, selectedGenre}) => {
         })
         return genreNameList
     }
-    // 선택한 장르에 해당하는 데이터만 표시
-    if (selectedGenre && !movie.genre_ids.includes(selectedGenre)) {
-        return null;
-    }
+
   return (
     // eslint-disable-next-line
     <div className="movie-detail-card" style={{backgroundImage:"url(" + `https://media.themoviedb.org/t/p/w600_and_h900_bestv2${movie.poster_path}` + ")"}}>

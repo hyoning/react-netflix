@@ -48,14 +48,14 @@ const MoviePage = () => {
   }
   // 정렬 적용
   if (sortOrder) {
-  filteredMovies.sort((a, b) => {
-    if (sortOrder === "asc") {
-      return a.vote_average - b.vote_average;
-    } else {
-      return b.vote_average - a.vote_average;
-    }
-  });
-}
+    filteredMovies.sort((a, b) => {
+      if (sortOrder === "asc") {
+        return a.vote_average - b.vote_average;
+      } else {
+        return b.vote_average - a.vote_average;
+      }
+    });
+  }
  // 장르 필터 변경 시 페이지를 1로 리셋
   useEffect(() => {
     setPage(1);
