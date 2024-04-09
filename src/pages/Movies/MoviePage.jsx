@@ -28,6 +28,7 @@ const MoviePage = () => {
   const [sortOrder, setSortOrder] = useState("");
   const [genresFilter, setGenresFilter] = useState("");
   const {data, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
+  
   const handlePageClick = ({selected}) => {
     setPage(selected + 1)
   }
@@ -35,6 +36,7 @@ const MoviePage = () => {
   const handleSortChange = (order) => {
     setSortOrder(order);
   };
+  //장르 옵션 변경 핸들러
   const handleGenreChange = (genreId) => {
     setGenresFilter(genreId);
   };
