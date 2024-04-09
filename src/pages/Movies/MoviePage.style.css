@@ -1,0 +1,24 @@
+.movie-page-wrap .pagination{
+    justify-content: center;
+    padding:5rem 0;
+}
+.movie-page-wrap .page-link{
+    color: #222;
+}
+.movie-page-wrap .active>.page-link,
+.movie-page-wrap .page-link.active {
+    z-index: 3;
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+.movie-page-wrap .disabled>.page-link,
+.movie-page-wrap .page-link.disabled {
+    color: #aaa;
+    background-color: #eee;
+    border-color: #aaa;
+}
+.movie-page-list{
+    width:  100%;
+    padding: 0 16px;
+}
