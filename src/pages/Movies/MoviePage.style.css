@@ -1,3 +1,12 @@
+.movie-page-title{
+    font-size:2rem;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom:1px solid #333;
+    font-weight: 700;
+}
 .movie-page-wrap .pagination{
     justify-content: center;
     padding:5rem 0;
@@ -20,5 +29,16 @@
 }
 .movie-page-list{
     width:  100%;
-    padding: 0 16px;
+    padding: 0 5vw;
+}
+.filter-wrap {
+    display: flex;
+    width:100%;
+    padding: 20px 16px;
+    gap:10px;
+    justify-content: flex-end;
+}
+.filter-wrap .form-select{
+    font-size: .8rem;
+    max-width: 150px;
 }
