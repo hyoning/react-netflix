@@ -7,6 +7,10 @@
     border-bottom:1px solid #333;
     font-weight: 700;
 }
+.movie-search-keyword{
+    font-size:1rem;
+    font-weight: 300;
+}
 .movie-page-wrap .pagination{
     justify-content: center;
     padding:5rem 0;
@@ -31,14 +35,21 @@
     width:  100%;
     padding: 0 5vw;
 }
-.filter-wrap {
-    display: flex;
+.filter-wrap{
     width:100%;
-    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5vw;
+}
+.filter-total{
+
+}
+.filter-box {
+    display: flex;
     gap:10px;
     justify-content: flex-end;
 }
-.filter-wrap .form-select{
+.filter-box .form-select{
     font-size: .8rem;
     max-width: 150px;
 }

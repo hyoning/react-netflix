@@ -73,10 +73,15 @@ const MoviePage = () => {
   }
   return (
     <div className="movie-page-wrap">
-        <div className="movie-page-title">{pageTitle}</div>
+        <div className="movie-page-title">{pageTitle}
+          {keyword ? <p className="movie-search-keyword">({keyword})</p> : ''}
+        </div>
         <div className="filter-wrap">
-            <PopularFilter onSortChange={handleSortChange}/>
-            <GenresFilter onGenreChange={handleGenreChange}/>
+          <div className="filter-total">전체 : {filteredMovies.length}</div>
+          <div className="filter-box">
+              <PopularFilter onSortChange={handleSortChange}/>
+              <GenresFilter onGenreChange={handleGenreChange}/>
+          </div>
         </div>
         <div className="movie-page-list">
             <Row>
