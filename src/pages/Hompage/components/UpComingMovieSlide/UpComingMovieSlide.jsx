@@ -1,11 +1,11 @@
 import React from 'react'
-import { usePopularMoviesQuery } from '../../../../hook/usePopularMovies';
+import { useUpComingMoviesQuery } from '../../../../hook/useUpComingMovie';
 import { Alert } from 'bootstrap';
 import MovieSlider from '../../../../common/MovieSlider/MovieSlider';
 import {responsive} from '../../../../constants/responsive';
 
-const PopularMovieSlide = () => {
-    const {data, isLoading, isError, error} = usePopularMoviesQuery();
+const UpComingMovieSlide = () => {
+    const {data, isLoading, isError, error} = useUpComingMoviesQuery();
     if(isLoading){
         return <h1>Loading...</h1>
         }
@@ -13,10 +13,10 @@ const PopularMovieSlide = () => {
         return <Alert variant='danger'>{error.message}</Alert>
     }
     return (
-        <div className="popular-movies">
-            <MovieSlider title="Popular Movies" movies={data.results} responsive={responsive}/>
+        <div className="upcoming-movies">
+            <MovieSlider title="UpComing Movies" movies={data.results} responsive={responsive}/>
         </div>
     )
 }
 
-export default PopularMovieSlide
+export default UpComingMovieSlide
