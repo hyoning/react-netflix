@@ -8,6 +8,10 @@ const MovieDetailInfo = ({movie, id}) => {
   const {data: video} = useMovieInfoQuery({id});
   console.log(video)
   
+  const priceToString = (price) => {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  };
+
   return (
     <div className="movie-detail-info">
         <div className='poster-banner'>
@@ -26,15 +30,23 @@ const MovieDetailInfo = ({movie, id}) => {
             )}
         </div> 
         <div className="detail-cont-wrap">
-          <div className="detail-bedge">
-              {movie?.genres.map((item, index) => 
-                  <Badge bg="danger" key={index}>{item.name}</Badge>
-              )}
+          <div className="detail-titleWrap">
+            <div className="detail-bedge">
+                {movie?.genres.map((item, index) => 
+                    <Badge bg="danger" key={index}>{item.name}</Badge>
+                )}
+            </div>
+            <div className="detail-title">{movie?.title}</div>
+            <div className="detail-subtitle">{movie?.tagline}</div>
+            <MovieTag movie={movie}/>
           </div>
-          <div className="detail-title">{movie?.title}</div>
-          <div className="detail-subtitle">{movie?.tagline}</div>
-          <MovieTag movie={movie}/>
           <div className="detail-cont">{movie?.overview}</div>
+          <ul className="detail-info-list">
+            <li><span>Budget</span>${priceToString(movie?.budget)}</li>
+            <li><span>Revenue</span>${priceToString(movie?.revenue)}</li>
+            <li><span>Release Date</span>{movie?.release_date}</li>
+            <li><span>Run Time</span>{movie?.runtime}분</li>
+          </ul>
         </div>
     </div>
   )
