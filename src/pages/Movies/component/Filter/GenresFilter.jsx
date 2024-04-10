@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form } from 'react-bootstrap';
-import { useMovieGenreQuery } from '../../../../hook/useMoveGenre';
+import { useMovieGenreQuery } from '../../../../hook/useMovieGenre';
 
 const GenresFilter = ({ onGenreChange }) => {
   const { data: genres, isLoading, isError } = useMovieGenreQuery();

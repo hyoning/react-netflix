@@ -9,6 +9,7 @@ import ReactPaginate from 'react-paginate';
 import './MoviePage.style.css'
 import GenresFilter from './component/Filter/GenresFilter';
 import PopularFilter from './component/Filter/PopularFilter';
+import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 //경로 2가지 
 //nav바에서 클릭해서 온 경우 => popularMovie 보여주기
 //keyword 입력해서 온 경우 => keyword와 관련된 영화들을 보여줌
@@ -69,7 +70,7 @@ const MoviePage = () => {
   }, [keyword]); 
 
   if(isLoading){
-    return <h1>Loading...</h1>
+    return <LoadingSpinner/>
     }
   if(isError){
       return <Alert variant='danger'>{error.message}</Alert>
