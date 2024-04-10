@@ -3,7 +3,6 @@ import { useSearchParams } from 'react-router-dom';
 import { useSearchMovieQuery } from '../../hook/useSearchMovie'
 import { Alert } from 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Row, Col} from 'react-bootstrap'
 import MoviePageCard from './component/MoviePageCard/MoviePageCard';
 import { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
@@ -84,13 +83,13 @@ const MoviePage = () => {
           </div>
         </div>
         <div className="movie-page-list">
-            <Row>
+            <ul className="movie-list-box">
               {filteredMovies.map((movie, index) => (
-                <Col key={index} lg={6} xs={12}>
+                <li key={index}>
                   <MoviePageCard movie={movie}/>
-                </Col>
+                </li>
               ))}
-            </Row>
+            </ul>
             <ReactPaginate
                 nextLabel=">"
                 onPageChange={handlePageClick}

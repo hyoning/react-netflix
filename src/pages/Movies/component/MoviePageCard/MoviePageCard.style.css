@@ -46,7 +46,7 @@
     z-index: 2;
 }
 .overlay h1{
-    font-size:5vw;
+    font-size:6vw;
     width:100%;
     overflow: hidden;
     white-space: normal;
@@ -57,19 +57,19 @@
     -webkit-box-orient: vertical;
 }
 .overlay h4{
-    font-size:2.5vw;
+    font-size:2.6vw;
     color:#999;
 }
 .movie-card-sub{
     margin:2vw 0;
-    font-size:3vw;
+    font-size:3.2vw;
     width:100%;
     font-weight: 300;
     overflow: hidden;
     white-space: normal;
     text-overflow: ellipsis;
     word-break: keep-all;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
@@ -82,7 +82,7 @@
     margin-top:2vw;
 }
 .badge-wrap .badge{
-    font-size:2.4vw;
+    font-size:2.6vw;
 }
 .movie-card-info-wrap{
     display: flex;
@@ -91,7 +91,7 @@
     align-items: center;
     flex-wrap: wrap;
     column-gap: 2.4vw;
-    font-size: 3vw;
+    font-size: 3.2vw;
 }
 .movie-popular,
 .movie-vote{
@@ -101,7 +101,7 @@
 }
 .movie-popular svg,
 .movie-vote img{
-    width:3vw;
+    width:3.2vw;
 }
 .movie-popular svg{
     filter: invert();
@@ -124,41 +124,79 @@
 .adult_19{
     background:#dc3545;
 }
-@media (min-width:992px){
+@media (min-width:465px) and (max-width:1024px) {
     .overlay{
         padding:2vw;
     }
     .overlay h1{
         font-size:3vw;
+        margin-bottom:0.5vw;
     }
     .overlay h4{
-        font-size:1vw;
+        font-size:1.4vw;
+        margin-bottom:0.5vw;
     }
     .movie-card-sub{
-        font-size:1.4vw;
+        font-size:2vw;
+        margin:1vw 0;
     }
     .badge-wrap{
-        padding-top:2vw;
-        margin-top:1.5vw;
+        padding-top:1.2vw;
+        margin-top:0.8vw;
     }
     .badge-wrap .badge{
-        font-size:1.2vw;
-    }
-    .movie-card-sub{
-        margin:1.5vw 0;
+        font-size:1.4vw;
     }
     .movie-card-info-wrap{
-        font-size: 1.2vw;
-        column-gap: 0.7vw 
+        font-size: 2vw;
+        column-gap: 0.4vw 
     }
     .adult_all,
     .adult_19{
-        width: 2.2vw;
-        height: 2.2vw;
-        font-size: 1vw;
+        width: 2vw;
+        height: 2vw;
+        font-size: 0.8vw;
     }
     .movie-popular svg,
     .movie-vote img{
         width:2vw;
+    }
+}
+@media (min-width:1025px){
+    .overlay{
+        padding:1.6vw;
+    }
+    .overlay h1{
+        font-size:2vw;
+        margin-bottom:0.5vw;
+    }
+    .overlay h4{
+        font-size:0.8vw;
+        margin-bottom:0.5vw;
+    }
+    .movie-card-sub{
+        font-size:1.1vw;
+        margin:0.5vw 0;
+    }
+    .badge-wrap{
+        padding-top:1vw;
+        margin-top:0.8vw;
+    }
+    .badge-wrap .badge{
+        font-size:0.8vw;
+    }
+    .movie-card-info-wrap{
+        font-size: 1.1vw;
+        column-gap: 0.4vw 
+    }
+    .adult_all,
+    .adult_19{
+        width: 2vw;
+        height: 2vw;
+        font-size: 0.8vw;
+    }
+    .movie-popular svg,
+    .movie-vote img{
+        width:1.1vw;
     }
 }
