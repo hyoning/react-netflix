@@ -149,7 +149,7 @@
     }
     .movie-card-info-wrap{
         font-size: 1.8vw;
-        column-gap: 0.4vw 
+        column-gap: 1.8vw 
     }
     .adult_all,
     .adult_19{
@@ -164,10 +164,10 @@
 }
 @media (min-width:1025px){
     .overlay{
-        padding:1.6vw;
+        padding:1.2vw;
     }
     .overlay h1{
-        font-size:2vw;
+        font-size:1.8vw;
         margin-bottom:0.5vw;
     }
     .overlay h4{
@@ -175,28 +175,29 @@
         margin-bottom:0.5vw;
     }
     .movie-card-sub{
-        font-size:1.1vw;
+        font-size:1vw;
         margin:0.5vw 0;
+        -webkit-line-clamp: 2;
     }
     .badge-wrap{
         padding-top:1vw;
         margin-top:0.8vw;
     }
     .badge-wrap .badge{
-        font-size:0.8vw;
+        font-size:0.6vw;
     }
     .movie-card-info-wrap{
-        font-size: 1.1vw;
-        column-gap: 0.4vw 
+        font-size: 0.8vw;
+        column-gap: 0.8vw 
     }
     .adult_all,
     .adult_19{
-        width: 2vw;
-        height: 2vw;
-        font-size: 0.8vw;
+        width: 1.4vw;
+        height: 1.4vw;
+        font-size: 0.5vw;
     }
     .movie-popular svg,
     .movie-vote img{
-        width:1.1vw;
+        width:0.8vw;
     }
 }

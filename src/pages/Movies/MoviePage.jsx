@@ -28,6 +28,7 @@ const MoviePage = () => {
   const [genresFilter, setGenresFilter] = useState("");
 
   const {data, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
+  console.log(data);
   const handlePageClick = ({selected}) => {
     setPage(selected + 1)
   }
@@ -61,7 +62,7 @@ const MoviePage = () => {
   useEffect(() => {
     setPage(1);
   }, [genresFilter]);
-  
+
   useEffect(() => {
     // URL의 쿼리 파라미터가 변경될 때 장르 필터를 초기화
     setGenresFilter("");
