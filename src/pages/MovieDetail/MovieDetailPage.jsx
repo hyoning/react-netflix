@@ -3,6 +3,8 @@ import { Alert } from 'bootstrap';
 import { useParams } from 'react-router-dom'
 import {useMovieDetailQuery} from '../../hook/useMovieDetail'
 import MovieDetailInfo from './component/MovieDetailInfo/MovieDetailInfo';
+import MovieDetailReview from './component/MovieDetailReview/MovieDetailReview';
+
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 import './MovieDetailPage.style.css'
 const MovieDetailPage = () => {
@@ -29,6 +31,7 @@ const MovieDetailPage = () => {
 }}>
         </div>
         <MovieDetailInfo movie={movie} id={id}/>
+        <MovieDetailReview id={id}/>
     </div>
   )
 }
