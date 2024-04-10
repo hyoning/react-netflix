@@ -1,10 +1,9 @@
 import React from 'react'
 import { Badge } from 'react-bootstrap'
 import './MovieCard.style.css'
-import imdb from '../../assets/images/imdb.png'
-import { ReactComponent as LikeIcon } from "../../assets/images/like.svg";
 import { useMovieGenreQuery } from '../../hook/useMovieGenre'
 import { useNavigate } from 'react-router-dom';
+import MovieTag from '../MovieTag/MovieTag';
 
 const MovieCard = ({movie}) => {
     const {data:genreData} = useMovieGenreQuery();
@@ -33,15 +32,7 @@ const MovieCard = ({movie}) => {
                 )}
                 </div>
             </div>    
-            <div className="movie-card-info-wrap">
-                <div className="movie-adult">
-                    {movie.adult ? <span className="adult_19">19</span> : <span className="adult_all bd-success">ALL</span>}
-                </div>
-                <div className="movie-card-info">
-                    <div className="movie-vote"><img src={imdb} alt="imdb" />{movie.vote_average}</div>
-                    <div className="movie-popular"><LikeIcon/>{movie.popularity}</div>
-                </div>
-            </div>
+            <MovieTag movie={movie}/>
         </div>
     </div>
   )

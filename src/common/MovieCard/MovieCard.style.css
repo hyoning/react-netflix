@@ -64,71 +64,13 @@
 .movie-card .badge-wrap .badge{
     font-size:2.4vw;
 }
-.movie-card .movie-card-info-wrap{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:5px;
-}
-.movie-card .movie-card-info{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 2.4vw;
-    font-size: 3vw;
-}
-.movie-card .movie-popular,
-.movie-card .movie-vote{
-    display: flex;
-    align-items: center;
-    gap:4px;
-}
-.movie-card .movie-popular svg,
-.movie-card ㅍ.movie-vote img{
-    width:3vw;
-}
-.movie-card .movie-popular svg{
-    filter: invert();
-}
-.movie-card .adult_all,
-.movie-card .adult_19{
-    color:#fff;
-    border-radius: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 4.5vw;
-    height: 4.5vw;
-    font-size: 1.8vw;
-}
-.movie-card .adult_all{
-    background:#198754;
-}
-.movie-card .adult_19{
-    background:#dc3545;
-}
+
 @media (min-width:465px) and (max-width:1024px) {
     .movie-card .overlay h1{
         font-size:4vw;
     }
     .movie-card .badge-wrap .badge{
         font-size:1.6vw;
-    }
-    .movie-card .movie-card-info{
-        font-size: 2vw;
-        column-gap:1.5vw;
-    }
-    .movie-card .adult_all,
-    .movie-card .adult_19{
-        width: 2.6vw;
-        height: 2.6vw;
-        font-size: 1.2vw;
-    }
-    .movie-card .movie-popular svg,
-    .movie-card .movie-vote img{
-        width:2vw;
     }
 }
 @media (min-width:1025px){
@@ -137,19 +79,5 @@
     }
     .movie-card .badge-wrap .badge{
         font-size:0.8vw;
-    }
-    .movie-card .movie-card-info{
-        font-size: 0.9vw;
-        column-gap: 0.7vw 
-    }
-    .movie-card .adult_all,
-    .movie-card .adult_19{
-        width: 1.2vw;
-        height: 1.2vw;
-        font-size: 0.5vw;
-    }
-    .movie-card .movie-popular svg,
-    .movie-card .movie-vote img{
-        width:1vw;
     }
 }

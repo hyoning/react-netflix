@@ -37,7 +37,7 @@ const MoviePage = () => {
   const handleSortChange = (order) => {
     setSortOrder(order);
   };
-  //장르 옵션 변경 핸들러
+  // 장르 옵션 변경 핸들러
   const handleGenreChange = (genreId) => {
     setGenresFilter(genreId);
   };
