@@ -26,8 +26,8 @@ const MoviePage = () => {
   // eslint-disable-next-line
   const [sortOrder, setSortOrder] = useState("");
   const [genresFilter, setGenresFilter] = useState("");
+
   const {data, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
-  
   const handlePageClick = ({selected}) => {
     setPage(selected + 1)
   }
@@ -45,6 +45,7 @@ const MoviePage = () => {
   if (genresFilter) {
     filteredMovies = filteredMovies.filter(movie => movie.genre_ids.includes(parseInt(genresFilter)));
   }
+  console.log(filteredMovies);
   // 정렬 적용
   if (sortOrder) {
     filteredMovies.sort((a, b) => {
@@ -55,10 +56,12 @@ const MoviePage = () => {
       }
     });
   }
+
  // 장르 필터 변경 시 페이지를 1로 리셋
   useEffect(() => {
     setPage(1);
   }, [genresFilter]);
+  
   useEffect(() => {
     // URL의 쿼리 파라미터가 변경될 때 장르 필터를 초기화
     setGenresFilter("");
@@ -76,7 +79,8 @@ const MoviePage = () => {
           {keyword ? <p className="movie-search-keyword">({keyword})</p> : ''}
         </div>
         <div className="filter-wrap">
-          <div className="filter-total">전체 : {filteredMovies.length}</div>
+          {/* <div className="filter-total">전체 : {filteredMovies.length}</div> */}
+          <div className="filter-total">전체 : {data.total_results}</div>
           <div className="filter-box">
               <PopularFilter onSortChange={handleSortChange}/>
               <GenresFilter onGenreChange={handleGenreChange}/>
@@ -95,7 +99,9 @@ const MoviePage = () => {
                 onPageChange={handlePageClick}
                 pageRangeDisplayed={3}
                 marginPagesDisplayed={2}
-                pageCount={Math.ceil(filteredMovies.length / 10)}// 전체 페이지
+                //pageCount={Math.ceil(filteredMovies.length / 10)}// 전체 페이지
+                // pageCount={Math.ceil(totalItems / 10)}// 전체 페이지
+                pageCount={data.total_pages}// 전체 페이지
                 forcePage={page - 1}
                 previousLabel="<"
                 pageClassName="page-item"

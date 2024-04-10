@@ -129,7 +129,7 @@
         padding:2vw;
     }
     .overlay h1{
-        font-size:3vw;
+        font-size:2.8vw;
         margin-bottom:0.5vw;
     }
     .overlay h4{
@@ -137,7 +137,7 @@
         margin-bottom:0.5vw;
     }
     .movie-card-sub{
-        font-size:2vw;
+        font-size:1.8vw;
         margin:1vw 0;
     }
     .badge-wrap{
@@ -148,7 +148,7 @@
         font-size:1.4vw;
     }
     .movie-card-info-wrap{
-        font-size: 2vw;
+        font-size: 1.8vw;
         column-gap: 0.4vw 
     }
     .adult_all,
@@ -159,7 +159,7 @@
     }
     .movie-popular svg,
     .movie-vote img{
-        width:2vw;
+        width:1.8vw;
     }
 }
 @media (min-width:1025px){
