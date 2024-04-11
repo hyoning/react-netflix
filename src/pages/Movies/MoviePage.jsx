@@ -24,12 +24,10 @@ const MoviePage = () => {
   const keyword = query.get('q');
   const pageTitle = keyword ? "Search" : "Movie";
   const [page, setPage] = useState(1);
-  // eslint-disable-next-line
   const [sortOrder, setSortOrder] = useState("");
   const [genresFilter, setGenresFilter] = useState("");
-
   const {data, isLoading, isError, error} = useSearchMovieQuery({keyword, page});
-  console.log(data);
+  
   const handlePageClick = ({selected}) => {
     setPage(selected + 1)
   }
@@ -41,13 +39,13 @@ const MoviePage = () => {
   const handleGenreChange = (genreId) => {
     setGenresFilter(genreId);
   };
-
+  console.log(data)
   // 필터링된 영화 데이터를 준비합니다.
   let filteredMovies = data?.results || [];
   if (genresFilter) {
     filteredMovies = filteredMovies.filter(movie => movie.genre_ids.includes(parseInt(genresFilter)));
   }
-  console.log(filteredMovies);
+  
   // 정렬 적용
   if (sortOrder) {
     filteredMovies.sort((a, b) => {
