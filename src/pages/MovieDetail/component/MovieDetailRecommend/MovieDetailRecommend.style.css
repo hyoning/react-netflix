@@ -1,35 +1,34 @@
-.detail-review-wrap{
+.detail-recommend-wrap{
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
     position: relative;  
 }
-.review-title{
+.recommend-title{
     font-weight: 600;
 }
-.review-none{
+.recommend-none{
     font-size:1rem;
 }
-.review-list{
+.recommend-list{
     list-style:none;
     padding:0;
     display: flex;
     flex-direction: column;
     gap:10px;
 }
-.review-list li{
+.recommend-list li{
     width:100%;
-    background-color:rgb(33, 37, 41);
     padding:1.2rem;
     border-radius: 1rem;
 }
 @media (min-width:465px) and (max-width:1024px) {
-    .review-list li{
+    .recommend-list li{
         padding:1.4rem;
     }
 }
 @media (min-width:1025px){
-    .review-list li{
+    .recommend-list li{
         padding:2rem;
     }
 }

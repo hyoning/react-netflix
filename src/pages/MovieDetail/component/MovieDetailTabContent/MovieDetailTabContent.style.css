@@ -1,0 +1,15 @@
+.movie-detail-tab-wrap{
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 2rem 16px;
+    position: relative;  
+}
+@media (min-width:465px) and (max-width:1024px) {
+}
+@media (min-width:1025px){
+    .movie-detail-tab-wrap{
+        max-width: 1000px;
+        padding: 2rem 0;
+    } 
+}

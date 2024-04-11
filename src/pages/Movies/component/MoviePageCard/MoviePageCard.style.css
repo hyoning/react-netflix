@@ -113,16 +113,16 @@
         padding:1.2vw;
     }
     .overlay h1{
-        font-size:1.8vw;
-        margin-bottom:0.5vw;
+        font-size:1.4vw;
+        margin-bottom:0.3vw;
     }
     .overlay h4{
         font-size:0.8vw;
-        margin-bottom:0.5vw;
+        margin-bottom:0.3vw;
     }
     .movie-card-sub{
         font-size:1vw;
-        margin:0.5vw 0;
+        margin:0.3vw 0;
         -webkit-line-clamp: 2;
     }
     .badge-wrap{
@@ -130,6 +130,6 @@
         margin-top:0.8vw;
     }
     .badge-wrap .badge{
-        font-size:0.6vw;
+        font-size:0.7vw;
     }
 }

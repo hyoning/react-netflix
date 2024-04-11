@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import './MovieReviewCard.style.css'
 const MovieReviewCard = ({item}) => {
-    console.log(item);
     const [reviewMore, setReviewMore] = useState(false);
 
   return (
