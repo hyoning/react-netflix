@@ -21,7 +21,7 @@ const MovieRecommendCard = ({item}) => {
       backgroundImage: `url(https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${item?.backdrop_path})`,
     }}>
       <div className="recommend-card-detail">
-         <div class="recommend-card-title-wrap">
+         <div className="recommend-card-title-wrap">
             <h4 className="recommend-card-title">{item?.title}</h4>
             <div className="detail-bedge">
                     {showGenre(item.genre_ids).map((id, index) => 
