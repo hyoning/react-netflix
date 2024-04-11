@@ -39,7 +39,7 @@ const MoviePage = () => {
   const handleGenreChange = (genreId) => {
     setGenresFilter(genreId);
   };
-  console.log(data)
+
   // 필터링된 영화 데이터를 준비합니다.
   let filteredMovies = data?.results || [];
   if (genresFilter) {
