@@ -74,6 +74,7 @@
     border-radius: 3rem;
     margin-right:0.5rem;
 }
+
 @media (min-width:465px) and (max-width:1024px) {
     .movie-detail-info{
         display: flex;
@@ -110,6 +111,9 @@
     }
     .detail-info-list span{
         width:7.2rem;
+    }
+    .detail-watch-btn{
+        font-size:1rem;
     }
 }
 @media (min-width:1025px){
@@ -150,5 +154,8 @@
     }
     .detail-info-list span{
         width:7.2rem;
+    }
+    .detail-watch-btn{
+        font-size:1.2rem;
     }
 }

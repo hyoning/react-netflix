@@ -4,7 +4,6 @@ import MovieRecommendCard from '../MovieRecommendCard/MovieRecommendCard'
 const MovieDetailRecommend = ({recommend}) => {
   return (
     <div className="detail-recommend-wrap">
-        <h3>Related Movies</h3>
         {recommend?.length === 0 ? (
           <div className="recommend-none">추천영화가 없습니다.</div>
         ) : (

@@ -2,12 +2,13 @@ import React from 'react'
 import { Badge } from 'react-bootstrap'
 import './MovieDetailInfo.style.css'
 import { useMovieInfoQuery } from '../../../../hook/useMovieInfo'
+
 import MovieTag from '../../../../common/MovieTag/MovieTag'
+import MovieModal from '../MovieModal/MovieModal'
 
 const MovieDetailInfo = ({movie, id}) => {
   const {data: video} = useMovieInfoQuery({id});
-  console.log(video)
-  
+
   const priceToString = (price) => {
     return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
@@ -47,6 +48,7 @@ const MovieDetailInfo = ({movie, id}) => {
             <li><span>Release Date</span>{movie?.release_date}</li>
             <li><span>Run Time</span>{movie?.runtime}분</li>
           </ul>
+          <MovieModal video={video}/>
         </div>
     </div>
   )

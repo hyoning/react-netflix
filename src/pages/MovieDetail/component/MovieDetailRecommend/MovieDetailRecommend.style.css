@@ -9,6 +9,10 @@
 }
 .recommend-none{
     font-size:1rem;
+    padding: 5rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .recommend-list{
     list-style:none;

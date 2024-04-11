@@ -14,8 +14,6 @@ const MovieRecommendCard = ({item}) => {
     })
     return genreNameList
 }
-
-  console.log(item);
   return (
     <div className="recommend-card-box" style={{
       backgroundImage: `url(https://media.themoviedb.org/t/p/w1920_and_h800_multi_faces${item?.backdrop_path})`,

@@ -6,6 +6,7 @@ import MovieDetailInfo from './component/MovieDetailInfo/MovieDetailInfo';
 import LoadingSpinner from '../../common/LoadingSpinner/LoadingSpinner';
 import MovieDetailTabContent from './component/MovieDetailTabContent/MovieDetailTabContent';
 import './MovieDetailPage.style.css'
+import MovieCredit from './component/MovieCredit/MovieCredit';
 
 const MovieDetailPage = () => {
   const { id } = useParams();
@@ -29,7 +30,9 @@ const MovieDetailPage = () => {
 }}>
         </div>
         <MovieDetailInfo movie={movie} id={id}/>
+        <MovieCredit id={id}/>
         <MovieDetailTabContent id={id}/>
+
     </div>
   )
 }

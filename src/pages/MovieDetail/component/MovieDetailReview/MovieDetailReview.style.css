@@ -9,6 +9,10 @@
 }
 .review-none{
     font-size:1rem;
+    padding: 5rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .review-list{
     list-style:none;

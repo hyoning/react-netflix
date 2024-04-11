@@ -4,7 +4,6 @@ import './MovieDetailReview.style.css'
 const MovieDetailReview = ({review}) => {
   return (
     <div className="detail-review-wrap">
-        <h3 className="review-title">Review</h3>
         {review?.length === 0 ? (
             <div className="review-none">리뷰가 없습니다.</div>
         ) : (
