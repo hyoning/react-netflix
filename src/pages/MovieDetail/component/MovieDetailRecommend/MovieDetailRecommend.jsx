@@ -13,7 +13,7 @@ const MovieDetailRecommend = ({recommend}) => {
                   <MovieRecommendCard item={item}/>
               </li>
           ))}
-      </ul>
+          </ul>
         )}
     </div>
   )
